@@ -1,7 +1,7 @@
 import connection from '../database/connection'
 
 class SessionController {
-  async create(req, res) {
+  async store(req, res) {
     const { id } = req.body
     const ong = await connection('ongs')
       .where('id', id)
